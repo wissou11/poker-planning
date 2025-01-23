@@ -1,0 +1,61 @@
+#table-body-card{
+    box-shadow: 0px 0px 10px #ddd;
+    height: 70vh;
+    overflow: auto;
+}
+
+#user-avatar {
+    border-radius: 50%;
+    width: 50px;
+    margin-right: 1rem;
+}
+
+#action-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#send-btn{
+    background-color: #E73673;
+    border: #E73673 1px solid;
+    border-radius: 10%;
+    margin: 0;
+    padding: 3px;
+    width: 10%;
+    color: white;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    box-shadow: 0px 0px 10px #ddd;
+    background-color: white;
+    padding: .4rem 1rem .4rem 1rem;
+}
+
+#send-btn:hover{
+    background-color: #f31462;
+}
+
+form > input {
+    width: 80%;
+    background-color: transparent;
+    border: #ddd 1px solid;
+}
+
+@media (max-width: 1200px) {
+    form {
+        width: 100%;
+    }
+
+    form > input {
+        width: 70%;
+    }
+
+    #send-btn{
+        width: 28%;
+    }
+}

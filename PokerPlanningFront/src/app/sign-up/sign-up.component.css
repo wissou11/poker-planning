@@ -1,0 +1,37 @@
+/* .input-group {
+  position: relative;
+}
+  
+.input-group-append {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+}
+
+.input-group-append .btn-eye {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border: none;
+  background: none;
+  padding: 0 10px;
+}
+
+.eye-icon {
+  font-size: 1.2rem;
+  line-height: 1;
+} 
+*/
+
+.eye-icon {
+  font-size: 1.2rem;
+  line-height: 1;
+  border: none;
+}
+
+.input-group-append .btn-eye {
+  padding: 0 10px;
+}

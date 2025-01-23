@@ -1,0 +1,20 @@
+[{
+  "_id": {
+    "$oid": "6791f5dffeaf3523e0641196"
+  },
+  "title": "Poker Planning app ",
+  "description": "Using MongoDB, Spring boot, angular and python for web scraping",
+  "startdate": {
+    "$date": "2024-12-05T00:00:00.000Z"
+  },
+  "enddate": {
+    "$date": "2025-03-15T00:00:00.000Z"
+  },
+  "status": "In Progress",
+  "creator": "wissem bahrouni",
+  "developers": [
+    "6791f536feaf3523e0641194",
+    "6791f582feaf3523e0641195"
+  ],
+  "_class": "com.example.PokerPlanningBack.model.ProjectDTO"
+}]

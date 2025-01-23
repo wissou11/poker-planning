@@ -1,0 +1,65 @@
+<div class="bg-secondary d-flex align-items-center justify-content-between mb-2 border-radius-lg" id="action-bar">
+  <h6 class="text-white text-capitalize">Developers</h6>
+  <div id="action-btn">
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+      <div class="card my-4" id="table-body-card" >
+          <div class="card-body px-0 pb-2">
+              <div class="table-responsive p-0">
+                  <table class="table align-items-center mb-0">
+                    <thead>
+                      <tr>
+                        <th class="align-middle text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Name</th>
+                        <th class="align-middle text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Email</th>
+                        <th class="align-middle text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Statut</th>
+                        <th class="align-middle text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let developer of developers" class="align-middle text-center">
+                        <td>
+                          <div class="d-flex px-2 flex-column justify-content-center">
+                            <div class="my-auto">
+                              <h6 class="mb-0 text-sm">{{ developer.userName }}</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-sm font-weight-bold mb-0">{{ developer.email }}</p>
+                        </td>
+                        <td>
+                          <p class="text-sm font-weight-bold mb-0">{{ developer.statut }}</p>
+                        </td>
+                        <td class="align-middle d-flex gap-3 flex-row justify-content-center">
+                          <button class="btn btn-sm btn-success" (click)="enableDeveloper(developer.id)">ENABLE</button>
+                          <button class="btn btn-sm btn-danger" (click)="disableDeveloper(developer.id)">DISABLE</button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="" id="pagination-bar">
+  <nav aria-label="Page navigation example">
+      <ul class="pagination">
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      </ul>
+  </nav>
+</div>

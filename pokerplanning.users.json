@@ -1,0 +1,54 @@
+[{
+  "_id": {
+    "$oid": "66b1fd8a08cc04563bec3bcf"
+  },
+  "userName": "wissem bahrouni",
+  "email": "wissembahrouni123@gmail.com",
+  "password": "$2a$10$qOgq0jJbZ6tEWB/lEe5Ps.yaX44y7b68r96Di/LJ44DdInPeQxLsO",
+  "statut": "ENABLE",
+  "posts": [
+    {
+      "$ref": "posts",
+      "$id": {
+        "$oid": "66b1fcafd32f74612d2a23bc"
+      }
+    }
+  ],
+  "_class": "com.example.PokerPlanningBack.model.User"
+},
+{
+  "_id": {
+    "$oid": "6791f536feaf3523e0641194"
+  },
+  "userName": "wiss",
+  "email": "wessbahrouni@gmail.com",
+  "password": "$2a$10$DVa4NzXwRXA5Ivzp/jUtV.rMgXPH6cdQkcwk5z3JzykyedGAahCdG",
+  "statut": "ENABLE",
+  "posts": [
+    {
+      "$ref": "posts",
+      "$id": {
+        "$oid": "66b1fce0d32f74612d2a23bd"
+      }
+    }
+  ],
+  "_class": "com.example.PokerPlanningBack.model.User"
+},
+{
+  "_id": {
+    "$oid": "6791f582feaf3523e0641195"
+  },
+  "userName": "wess",
+  "email": "wesswessbahrouni@gmail.com",
+  "password": "$2a$10$o.mJEWtYfNtyK/RbW44Ns.cURJv/UjU2ACy4BMHpeBa8MhpiSNSFC",
+  "statut": "ENABLE",
+  "posts": [
+    {
+      "$ref": "posts",
+      "$id": {
+        "$oid": "66b1fce0d32f74612d2a23bd"
+      }
+    }
+  ],
+  "_class": "com.example.PokerPlanningBack.model.User"
+}]

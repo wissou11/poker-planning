@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col-12">
+    <div class="card bg-white my-4" id="table-body-card">
+      <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+      </div>
+      <div class="card-body px-5 py-5 border-radius-lg">
+        <ul class="list-group">
+          <li class="list-group-item border-0 d-flex align-items-center px-0 mb-2 pt-0" *ngFor="let reddit of reddits; let i = index">
+            <div>
+              <img src="../assets/img/profile-pic.jpg" id="user-avatar" alt="kal" class="border-radius-lg shadow">
+            </div>
+            <div class="d-flex align-items-start flex-column justify-content-center">
+              <h6 class="mb-0 text-sm">{{ reddit.title }}</h6>
+              <p class="mb-0 text-xs">
+                {{ isExpanded[i] ? reddit.content : (reddit.content | slice: 0: 100) + '...' }}
+              </p>
+              <button class="btn btn-link p-0 text-primary" (click)="toggleViewMore(i)">
+                {{ isExpanded[i] ? 'View Less' : 'View More' }}
+              </button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

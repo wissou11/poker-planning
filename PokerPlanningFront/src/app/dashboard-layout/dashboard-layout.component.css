@@ -1,0 +1,38 @@
+#iconNavbarSidenav {
+  display: none;
+}
+
+#sidenav-main {
+  transition: 700ms ease-in-out;
+}
+
+#navbarBlur{
+  height: 8vh
+}
+
+@media (max-width: 1200px) {
+  .sidenav {
+    margin-left: -300px;
+  }
+
+  .sidenav.show {
+    margin: 0;
+    transition: margin 200ms ease-in-out;
+  }
+
+  #main-section {
+    margin-left: 0;
+  }
+
+  #iconNavbarSidenav{
+    display: block;
+    cursor: pointer;
+  }
+  
+  #navbarBlur {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+  

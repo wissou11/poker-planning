@@ -1,0 +1,71 @@
+<div class="row">
+  <div *ngFor="let estimation of estimations" class="col-12 col-md-6 col-xl-4">
+    <div class="card my-4" id="table-body-card">
+      <div class="card-body px-4 py-4">
+        <ul class="list-group">
+          <li class="list-group-item border-0 ps-0 pt-0 text-sm">
+            <strong class="text-dark">Task title</strong> &nbsp; {{ estimation.taskTitle }}
+          </li>
+          <li class="list-group-item border-0 ps-0 pb-0 mt-4 d-flex align-middle justify-content-center">
+            <strong class="text-dark text-sm">
+              <a (click)="openModal(estimation.id)" class="btn btn-primary" style="margin: 0;">
+                Give your estimation
+              </a>
+            </strong>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  <!-- Modal for selecting score -->
+  <div *ngIf="isModalOpen" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content" style="margin-left: 2rem;">
+        <div id="card-container" class="modal-body" style="display: flex; align-items: center; justify-content: center;">
+          <div class="row">
+            <div class="col col-2 d-flex align-items-center justify-content-center w-100" >
+              <div class="card my-4 card-selectable black" data-value="1 ♠" (click)="selectCard(1, $event)" >
+                <div class="card-body px-4 py-4 estimation-card">
+                  ♠
+                </div>
+              </div>
+              <div class="card my-4 card-selectable red" data-value="2 ♥" (click)="selectCard(2, $event)">
+                <div class="card-body px-4 py-4 estimation-card" >
+                  ♥
+                </div>
+              </div>
+              <div class="card my-4 card-selectable black" data-value="3 ♣" (click)="selectCard(3, $event)">
+                <div class="card-body px-4 py-4 estimation-card" >
+                  ♣
+                </div>
+              </div>
+              <div class="card my-4 card-selectable red" data-value="5 ♦" (click)="selectCard(5, $event)">
+                <div class="card-body px-4 py-4 estimation-card" >
+                  ♦
+                </div>
+              </div>
+              <div class="card my-4 card-selectable black" data-value="8 ♠" (click)="selectCard(8, $event)">
+                <div class="card-body px-4 py-4 estimation-card">
+                  ♠
+                </div>
+              </div>
+              <div class="card my-4 card-selectable red" data-value="13 ♥" (click)="selectCard(13, $event)">
+                <div class="card-body px-4 py-4 estimation-card">
+                  ♥
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer d-flex align-items-center justify-content-center">
+          <button type="button" class="btn btn-outline-secondary" (click)="closeModal()">Close</button>
+          <button type="button" class="btn btn-primary" (click)="submitEstimation()" [disabled]="!selectedEstimationId || selectedScore === null">
+            Submit
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

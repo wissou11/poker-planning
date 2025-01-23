@@ -1,0 +1,71 @@
+<div class="bg-secondary d-flex align-items-center justify-content-between border-radius-lg mb-3" id="action-bar">
+  <h6 class="text-white text-capitalize">Create Project</h6>
+  <div id="action-btn">
+  </div>
+</div>
+<form class="card px-4 py-4" id="table-body-card"  [formGroup]="projectForm" (ngSubmit)="submit()">
+  <label for="projectTitle">Project Title</label>
+  <div class="input-group input-group-outline mb-3">
+    <input id="projectTitle" type="text" class="form-control" formControlName="title" placeholder="Enter project title" required>
+    <div *ngIf="projectForm.get('title')?.invalid && (projectForm.get('title')?.dirty || projectForm.get('title')?.touched)">
+      <div *ngIf="projectForm.get('title')?.errors?.['required']" class="text-danger">Title is required.</div>
+      <div *ngIf="projectForm.get('title')?.errors?.['minlength']" class="text-danger">Title must be at least 3 characters long.</div>
+      <div *ngIf="projectForm.get('title')?.errors?.['maxlength']" class="text-danger">Title must be less than 20 characters.</div>
+    </div>
+  </div>
+
+  <label for="projectDescription">Project Description</label>
+  <div class="input-group input-group-outline mb-3">
+    <textarea id="projectDescription" class="form-control" formControlName="description" style="height: 15rem;" placeholder="Enter project description" cols="100" required></textarea>
+    <div *ngIf="projectForm.get('description')?.invalid && (projectForm.get('description')?.dirty || projectForm.get('description')?.touched)">
+      <div *ngIf="projectForm.get('description')?.errors?.['required']" class="text-danger">Description is required.</div>
+    </div>
+  </div>
+
+  <label for="projectStartDate">Start Date</label>
+  <div class="input-group input-group-outline mb-3">
+    <input type="date" id="projectStartDate" class="form-control" name="startdate" formControlName="startdate" cols="100" required>
+    <div *ngIf="projectForm.get('startdate')?.invalid && (projectForm.get('startdate')?.dirty || projectForm.get('startdate')?.touched)">
+      <div *ngIf="projectForm.get('startdate')?.errors?.['required']" class="text-danger">Start Date is required.</div>
+    </div>
+  </div>
+
+  <label for="projectEndDate">End Date</label>
+  <div class="input-group input-group-outline mb-3">
+    <input type="date" id="projectEndDate" class="form-control" name="enddate"  formControlName="enddate" cols="100" required>
+    <div *ngIf="projectForm.get('enddate')?.invalid && (projectForm.get('enddate')?.dirty || projectForm.get('enddate')?.touched)">
+      <div *ngIf="projectForm.get('enddate')?.errors?.['required']" class="text-danger">End Date is required.</div>
+    </div>
+  </div>
+
+
+  <label for="projectDescription">Assign Developpers</label>
+  <div class="table-responsive p-0">
+    <table class="table align-items-center mb-3" style="border: 1px solid #ddd;">
+      <thead>
+        <tr>
+          <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7 align-middle text-center" scope="col">
+            Name
+          </th>
+          <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7 align-middle text-center" scope="col">
+            Email
+          </th>
+          <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7 align-middle text-center" scope="col">
+            Assigned
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let developer of developers; let i = index">
+          <td class="align-middle text-center">{{ developer.name }}</td>
+          <td class="align-middle text-center">{{ developer.email }}</td>
+          <td class="align-middle text-center">
+            <input type="checkbox" [formControl]="developerFormArray.controls[i]">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

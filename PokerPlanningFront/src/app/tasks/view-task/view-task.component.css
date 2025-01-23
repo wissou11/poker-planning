@@ -1,0 +1,55 @@
+#action-btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 22%;
+}
+
+#action-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .7rem;
+}
+
+#action-btn > a {
+    margin: 0;
+}
+
+#action-bar > h6 {
+    margin: 0;
+    padding: 0;
+}
+
+#table-body-card{
+    box-shadow: 0px 0px 10px #ddd;
+    /* height: 70vh; */
+}
+
+#pagination-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media (max-width: 1200px) {
+
+    #action-bar{
+        padding: .5rem;
+    }
+    #action-btn{
+        width: 40%;
+    }
+
+    #action-btn > a {
+        font-size: .6rem;
+    }
+}
+
+#importprojectsmodal{
+    position: absolute;
+    z-index: 2000;
+    pointer-events: none;
+}

@@ -1,0 +1,9 @@
+[{
+  "_id": {
+    "$oid": "66a81295ffa0184efd272471"
+  },
+  "nom": "sprint 1",
+  "projectId": "66a745578149e610337dca3d",
+  "status": "planned",
+  "_class": "com.example.PokerPlanningBack.model.SprintDTO"
+}]

@@ -1,0 +1,61 @@
+[{
+  "_id": {
+    "$oid": "678116321145835aa2bf9841"
+  },
+  "taskId": "67801e662b3ea63e9b32637e",
+  "status": "DISABLE",
+  "deadline": 1,
+  "averageScore": 0,
+  "scores": [],
+  "_class": "com.example.PokerPlanningBack.model.Estimation"
+},
+{
+  "_id": {
+    "$oid": "678116d21145835aa2bf9842"
+  },
+  "taskId": "67801e662b3ea63e9b32637e",
+  "status": "ENABLE",
+  "deadline": 2,
+  "averageScore": 0,
+  "scores": [
+    {
+      "userId": "66b787c8be21ed3176bba55e",
+      "scoreValue": 8,
+      "estimationId": "678116d21145835aa2bf9842"
+    },
+    {
+      "userId": "6791f536feaf3523e0641194",
+      "scoreValue": 8,
+      "estimationId": "678116d21145835aa2bf9842"
+    }
+  ],
+  "_class": "com.example.PokerPlanningBack.model.Estimation"
+},
+{
+  "_id": {
+    "$oid": "6782bccc27393c1a963b0b54"
+  },
+  "taskId": "67801e662b3ea63e9b32637e",
+  "status": "DISABLE",
+  "deadline": 2,
+  "averageScore": 0,
+  "scores": [
+    {
+      "userId": "66b787c8be21ed3176bba55e",
+      "scoreValue": 5,
+      "estimationId": "6782bccc27393c1a963b0b54"
+    }
+  ],
+  "_class": "com.example.PokerPlanningBack.model.Estimation"
+},
+{
+  "_id": {
+    "$oid": "6791f867feaf3523e0641198"
+  },
+  "taskId": "6791f60efeaf3523e0641197",
+  "status": "DISABLE",
+  "deadline": 1.5,
+  "averageScore": 0,
+  "scores": [],
+  "_class": "com.example.PokerPlanningBack.model.Estimation"
+}]

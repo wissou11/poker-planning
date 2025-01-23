@@ -1,0 +1,12 @@
+[{
+  "_id": {
+    "$oid": "66b1fcafd32f74612d2a23bc"
+  },
+  "name": "PRODUCTOWNER"
+},
+{
+  "_id": {
+    "$oid": "66b1fce0d32f74612d2a23bd"
+  },
+  "name": "DEVELOPPER"
+}]

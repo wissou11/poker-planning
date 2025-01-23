@@ -1,0 +1,20 @@
+[{
+  "_id": {
+    "$oid": "67801e662b3ea63e9b32637e"
+  },
+  "title": "create login",
+  "description": "create login ",
+  "projectId": "67800259d3e42471b8ff5937",
+  "duree": 0,
+  "_class": "com.example.PokerPlanningBack.model.TaskDTO"
+},
+{
+  "_id": {
+    "$oid": "6791f60efeaf3523e0641197"
+  },
+  "title": "create login page",
+  "description": "create a login page that uses tokens and for style use bootstrap",
+  "projectId": "6791f5dffeaf3523e0641196",
+  "duree": 0,
+  "_class": "com.example.PokerPlanningBack.model.TaskDTO"
+}]
