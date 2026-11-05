@@ -1,0 +1,14 @@
+# Secrets and local config
+.env
+.env.*
+!.env.example
+
+# Python and notebooks
+__pycache__/
+.venv/
+.ipynb_checkpoints/
+
+# Editors and OS
+.idea/
+.DS_Store
+Thumbs.db
